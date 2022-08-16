@@ -1,0 +1,120 @@
+.product_view{
+    &.modal{
+        .btn-close{
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 22px;
+            color: $white;
+        }
+        .shop-quick-view-ajax{
+            @include media-breakpoint-down(lg){
+                width: 100%;
+            }
+            .flex-prev,
+            .flex-next{
+                font-size: 0;
+                line-height: 52px;
+                text-align: center;
+                
+                &:after{
+                    font-family: "font-icons";
+                    
+                    font-size: 26px;
+                    color: $white;
+                }
+            }
+            .flex-next{
+                &::after{
+                    content: "\e7a5";
+                }
+            }
+            .flex-prev{
+                &::after{
+                    content: "\e7a4";
+                }
+            }
+        }
+        .modal-dialog{
+            @include media-breakpoint-up(sm){
+                max-width: 100%;
+            }
+            @include media-breakpoint-up(lg){
+                max-width: 800px;
+            }
+        }
+    }
+}
+.product{
+    .product-price{
+        font-size: 14px;
+        font-weight: normal;
+        color: #c06e52 !important;
+        ins{
+            color: #c06e52 !important;
+        }
+    }
+    .bg-overlay{
+        &-content{
+            a{
+                position: relative;
+                z-index: 2;
+            }
+            .stretched-link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+        
+    }
+}
+
+.footer-logo{
+    max-width: 230px;
+}
+#copyrights{
+    padding: 20px 0;
+}
+#footer .footer-widgets-wrap{
+    padding: 40px 0;
+}
+
+.woocommerce{
+    &-checkout{
+        .panel{
+            margin-bottom: 20px;
+            background-color: #f9f5f5;
+            border: 1px solid transparent;
+            &-heading{
+                padding: 12px 15px;
+                font-weight: 600;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #ffffff;
+                background: #0a0a0a;
+                margin-bottom: 20px;
+            }
+            &-body{
+                padding: 0 15px;
+
+                .woocommerce-billing-fields{
+                    .form-row{
+                        flex-direction: column;
+                    }
+                    label{
+                        display: block;
+                    }
+                    input{
+                        height: 40px;
+                        font-size: 14px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
